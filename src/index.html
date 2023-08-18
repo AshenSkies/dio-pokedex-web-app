@@ -2,16 +2,66 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Pokedex</title>
+        <title>Pokédex</title>
 
         <!--Normalize CSS-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-        <!--Global CSS and JS-->
-        <link rel="stylesheet" href="./assets/css/styles.css" type="stylesheet">
+        <!--Page Fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500;700&display=swap" rel="stylesheet">
+
+        <!--CSS-->
+        <link rel="stylesheet" href="./assets/css/styles.css">
+        <link rel="stylesheet" href="./assets/css/pokedex.css">
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <section class="content">
+            <h1>Pokédex</h1>
+            <h3>Search for Pokémon by name or using the National Pokédex number.</h3>
+            <ol class="pokelist">
+                <li class="pokemon">
+                    <div class="details">
+                        <h4>#001</h4>
+                        <h2>Bulbasaur</h2>
+                        <ol class="types">
+                            <li class="grass">Grass</li>
+                            <li class="poison">Poison</li>
+                        </ol>
+                    </div>
+                    <div class="image">
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg">
+                    </div>
+                </li>
+                <li class="pokemon">
+                    <div class="details">
+                        <h4>#002</h4>
+                        <h2>Ivysaur</h2>
+                        <ol class="types">
+                            <li class="grass">Grass</li>
+                            <li class="poison">Poison</li>
+                        </ol>
+                    </div>
+                    <div class="image">
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/2.svg">
+                    </div>
+                </li>
+                <li class="pokemon">
+                    <div class="details">
+                        <h4>#003</h4>
+                        <h2>Venusaur</h2>
+                        <ol class="types">
+                            <li class="grass">Grass</li>
+                            <li class="poison">Poison</li>
+                        </ol>
+                    </div>
+                    <div class="image">
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/3.svg">
+                    </div>
+                </li>
+            </ol>
+        </section>
     </body>
     <script src="./assets/js/main.js"></script>
 </html>

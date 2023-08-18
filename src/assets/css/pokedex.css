@@ -1,0 +1,123 @@
+.pokemon {
+    margin: 1.7rem;
+    height: 275px;
+    padding: 1rem;
+    background-color: #F95587;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: row;
+    background-image: url("../poke.png");
+    background-repeat: no-repeat;
+    background-size: 350px;
+    background-position: 97% 1rem;
+    position: relative;
+}
+
+.pokemon .image {
+    right: 2rem;
+    position:absolute;
+}
+
+.pokemon img {
+    max-width: 100%;
+    height: 300px;
+    bottom: 3rem;
+    position: relative;
+    filter: drop-shadow(0 0 0.75rem #404040);
+}
+
+.pokelist h2{
+    margin: 0;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    font-weight: 700;
+    font-size: 3rem;
+    color: #f9f9f0;
+}
+
+.pokelist h4{
+    margin: 0;
+    font-weight: 500;
+    font-size: 1.3rem;
+    margin-left: 1rem;
+    margin-top: 1rem;
+}
+
+.types {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.types li {
+    list-style: none;
+    margin-left: 1rem;
+    font-weight: 500;
+    font-size: 1.6rem;
+    border-radius: 10px;
+    padding: 0.5rem;
+    text-align: center;
+    color: #f9f9f0;
+}
+
+.types .normal {
+    background-color: #A8A77A;
+}
+.types .fire {
+    background-color: #EE8130;
+}
+.types .water {
+    background-color: #6390F0;
+}
+.types .electric {
+    background-color: #F7D02C;
+}
+.types .grass {
+    background-color: #7AC74C;
+}
+.types .ice {
+    background-color: #96D9D6;
+}
+.types .fighting {
+    background-color: #C22E28;
+}
+.types .poison {
+    background-color: #A33EA1;
+}
+.types .ground {
+    background-color: #E2BF65;
+}
+.types .flying {
+    background-color: #A98FF3;
+}
+.types .psychic {
+    background-color: #F95587;
+}
+.types .bug {
+    background-color: #A6B91A;
+}
+.types .rock {
+    background-color: #B6A136;
+}
+.types .ghost {
+    background-color: #735797;
+}
+.types .dragon {
+    background-color: #6F35FC;
+}
+.types .dark {
+    background-color: #705746;
+}
+.types .steel {
+    background-color: #B7B7CE;
+}
+.types .fairy {
+    background-color: #D685AD;
+}
+
+@media screen and (min-width: 1800px) {
+    .pokelist {
+        grid-template-columns: 1fr 1fr;
+    }
+}
