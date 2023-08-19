@@ -29,8 +29,7 @@ function normalizeNumberLength(num, length = 3) {
     return res
 }
 
-function pickAccentColor(poke){
-    const e = poke.types
+function pickAccentColor(e){
     if(e.length > 1) return mixColors(typeColors[e[0]], typeColors[e[1]], 0.2)
     else return mixColors(typeColors[e[0]], "c0c0c0", 0.5)
 }
@@ -44,19 +43,34 @@ function mixColors(colorA, colorB, threshold) {
     return '#' + r + g + b;
 }
 
+function filterEnglish(pokeEntries) {
+    let res = []
+    pokeEntries.forEach(element => {
+        if(element.language.name == "en") res.push(element)
+        //console.log(res.pop())
+    });
+    return res.pop()
+}
+
 function pokemonObjectToClass(poke){
     const pokemon = new Pokemon()
     pokemon.name = poke.name
     pokemon.id = poke.id
     pokemon.image = poke.sprites.other.dream_world.front_default
     pokemon.types = poke.types.map((typeCollection) => typeCollection.type.name)
+    pokemon.abilities = poke.abilities.map((abilityCollection) => capitalizeFirstLetter(abilityCollection.ability.name))
+    pokemon.accentColor = pickAccentColor(pokemon.types)
+    pokemon.flavorText = filterEnglish(poke.flavor_text_entries).flavor_text
+    pokemon.species = filterEnglish(poke.genera).genus
+    pokemon.shape = poke.shape.name
+    pokemon.legendary = poke.is_legendary
+    pokemon.mythical = poke.is_mythical
     return pokemon
 }
 
 function pokemonsToHTML(pokemon) {
-    let cardColor = pickAccentColor(pokemon)
 	return `
-		<li class="pokemon" style="background-color:${cardColor}">
+		<li class="pokemon" style="background-color:${pokemon.accentColor}" onclick="loadAttributes(${pokemon.id})">
             <div class="details">
                 <h4>#${normalizeNumberLength(pokemon.id)}</h4>
                 <h2>${capitalizeFirstLetter(pokemon.name)}</h2>

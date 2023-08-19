@@ -6,13 +6,19 @@
     border-radius: 1rem;
     display: flex;
     flex-direction: row;
-    background-image: url("../poke.png");
+    background-image: url("../res/poke.png");
     background-repeat: no-repeat;
     background-size: 350px;
     background-position: 97% 1rem;
     position: relative;
+    transition: 0.5s;
 }
 
+.pokemon:hover {
+    filter: drop-shadow(0 0 0.75rem #404040);
+    cursor: pointer;
+    height: 300px;
+}
 
 .pokemon .image {
     right: 2rem;
@@ -24,7 +30,7 @@
     height: 300px;
     bottom: 3rem;
     position: relative;
-    filter: drop-shadow(0 0 0.75rem #404040);
+    filter: drop-shadow(0 0 0.1rem #404040);
 }
 
 #pokelist h2{
@@ -49,6 +55,7 @@
     padding: 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    position: relative;
 }
 
 .types li {
@@ -77,6 +84,7 @@
 .types .grass {
     background-color: #7AC74C;
 }
+
 .types .ice {
     background-color: #96D9D6;
 }

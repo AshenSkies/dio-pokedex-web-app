@@ -4,9 +4,17 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+  }
+
+body {
+    
+    background-color: #f0f0f0;
+}
+
 .content {
     padding: 1rem;
-    background-color: #f0f0f0;
     height: 100vh;
 }
 
