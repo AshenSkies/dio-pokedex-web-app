@@ -13,20 +13,21 @@
     position: relative;
 }
 
+
 .pokemon .image {
     right: 2rem;
     position:absolute;
 }
 
 .pokemon img {
-    max-width: 100%;
+    max-width: 400px;
     height: 300px;
     bottom: 3rem;
     position: relative;
     filter: drop-shadow(0 0 0.75rem #404040);
 }
 
-.pokelist h2{
+#pokelist h2{
     margin: 0;
     margin-bottom: 1rem;
     margin-left: 1rem;
@@ -35,7 +36,7 @@
     color: #f9f9f0;
 }
 
-.pokelist h4{
+#pokelist h4{
     margin: 0;
     font-weight: 500;
     font-size: 1.3rem;
@@ -117,7 +118,11 @@
 }
 
 @media screen and (min-width: 1800px) {
-    .pokelist {
+    #pokelist {
         grid-template-columns: 1fr 1fr;
+    }
+    .content {
+        padding-left: 7%;
+        padding-right: 7%;
     }
 }

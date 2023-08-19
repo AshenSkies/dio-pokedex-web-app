@@ -23,7 +23,7 @@
     margin-bottom: 1rem;
 }
 
-.pokelist {
+#pokelist {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -33,3 +33,28 @@
     grid-template-columns: 1fr;
 }
 
+.pages {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0.7rem;
+    padding-bottom: 2rem;
+}
+
+#loadMore {
+    border: none;
+    background-color: #F95587;
+    padding: 0.5rem 1rem;
+    border-radius: 30px;
+    font-weight: 300;
+    font-size: 1.1rem;
+    color: white;
+    transition: 0.3s;
+}
+
+#loadMore:hover {
+    background-color: #A33EA1;
+    font-size: 1.2rem;
+}
